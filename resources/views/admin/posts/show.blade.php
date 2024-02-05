@@ -7,9 +7,18 @@
 
         <h2>{{ $post->title }}</h2>
 
-        <p>
+        <div>
             Categoria: {{$post->category ? $post->category->name : "Nessuna Categoria"}}
-        </p>
+        </div>
+
+        <div>
+            Tag: 
+            @foreach($post->tags as $tag)
+
+                <span class="badge bg-primary" >{{ $tag->name }}</span>
+                
+            @endforeach
+        </div>
 
         <div class="mt-4">
             Data: {{ $post->created_at}}
