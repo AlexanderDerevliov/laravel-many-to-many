@@ -15,7 +15,7 @@
             Tag: 
             @foreach($post->tags as $tag)
 
-                <span class="badge bg-primary" >{{ $tag->name }}</span>
+                <span class="badge" style="background-color: {{ $tag->hex_color }}">{{ $tag->name }}</span>
                 
             @endforeach
         </div>
